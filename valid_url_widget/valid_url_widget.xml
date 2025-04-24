@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template >
+
+
+
+
+
+
+    <t t-name="web.UrlField_url_validator" t-inherit="web.UrlField">
+        <xpath expr="//." position="inside">
+            <span class="text-danger" t-if="urlValidatorWidget" >Invalid URL</span>
+        </xpath>
+
+
+        <xpath expr="//input" position="after">
+            <a
+                t-if="props.record.data[props.name] and !urlValidatorWidget"
+                t-att-href="formattedHref"
+                class="ms-3 d-inline-flex align-items-center"
+                target="_blank"
+            >
+                <i class="fa fa-globe" data-tooltip="Go to URL" aria-label="Go to URL"></i>
+            </a>
+        </xpath>
+    </t>
+
+
+</template>

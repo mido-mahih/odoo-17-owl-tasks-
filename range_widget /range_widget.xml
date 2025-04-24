@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates >
+
+
+    <t t-name="to_do_list_owl.range_widget_view" owl="1">
+        <div>
+            <label for="sRange" class="form-label">
+                <span t-esc="this.props.record.data.salary + ' ' +this.state.currency"/>
+            </label>
+            <input type="range" class="form-range" id="sRange"
+            t-on-change="(e)=> this.chaneSalary(e)" min="5000" max="10000" step="500"
+                  t-att-value="this.props.record.data.salary"
+                   t-att-name="this.props.name"
+                   t-att-id="this.props.id"
+            />
+        </div>
+    </t>
+
+
+<!--    <t t-name="to_do_list_owl.range_widget_view" owl="1">-->
+<!--        <div>-->
+<!--            <label for="RangeWidget" class="form-label">-->
+<!--                <span t-esc="this.state.salary"/>-->
+<!--            </label>-->
+<!--            <input type="range" class="form-range" id="RangeWidget"-->
+<!--            min="3000" step="500" max="30000" t-on-change="(e,props)=> this.changeRange(e,props)"-->
+<!--                   t-att-value="props.record.data.salary"-->
+<!--                    t-att-name="props.name"-->
+<!--                    t-att-id="props.id"-->
+<!--            />-->
+<!--        </div>-->
+<!--    </t>-->
+
+</templates>

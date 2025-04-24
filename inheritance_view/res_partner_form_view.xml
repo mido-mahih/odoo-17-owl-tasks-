@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+
+
+
+            <t t-name="web.FormView.inheritance" t-inherit="web.FormView">
+                <xpath expr="//t[contains(@t-set-slot,'layout-actions')]">
+                    <button type="button" class="btn btn-primary ms-2" t-if="!urlValidatorWidget" t-on-click="this.visitWebSite" >vist website</button>
+                </xpath>
+            </t>
+
+
+<!--       <t t-name="web.FormView.Inheritance" t-inherit="web.FormView" >-->
+<!--            <xpath expr="//t[contains(@t-set-slot,'layout-actions')]" position="inside">-->
+<!--                <button type="button" class="btn btn-primary ms-2" t-on-click="()=> this.visitWebSite()" >vist website</button>-->
+<!--            </xpath>-->
+<!--        </t>-->
+
+</templates>

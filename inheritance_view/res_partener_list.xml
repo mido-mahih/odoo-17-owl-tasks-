@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+
+    <t t-name="web.ListView.Buttons.inheritance" t-inherit="web.ListView.Buttons">
+        <xpath expr="//div" position="inside" >
+            <button t-on-click="getOrders" class="btn btn-secondary">orders</button>
+            <button class="btn btn-secondary ms-2">Invoices</button>
+            <button class="btn btn-success ms-2" >Meetings</button>
+        </xpath>
+    </t>
+
+
+</templates>
